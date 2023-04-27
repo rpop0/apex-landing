@@ -3,8 +3,13 @@
 
     let isOpen = false;
     function toggle(e){
-        console.log(e);
         isOpen = !isOpen;
+    }
+
+    function close_nav(e){
+      if(isOpen){
+        isOpen = !isOpen
+      }
     }
 </script>
 
@@ -44,11 +49,11 @@
                 <div class="logo lg:hidden">
                     <Logo />
                 </div>
-                <a href="/" class="nav-underline">Acasă</a>
-                <a class="nav-underline" href="#">Despre Noi</a>
-                <a class="nav-underline" href="#">Contact</a>
-                <a  class="nav-underline" href="#">Driver Hub</a>
-                <a href="/apply" class="bg-apex-green transition-colors hover:bg-apex-purple py-2 px-7 rounded-full">Aplică acum!</a>
+                <a on:click={close_nav} href="/" class="nav-underline">Acasă</a>
+                <a on:click={close_nav} class="nav-underline" href="#">Despre Noi</a>
+                <a on:click={close_nav} class="nav-underline" href="#">Contact</a>
+                <a on:click={close_nav} class="nav-underline" href="#">Driver Hub</a>
+                <a on:click={close_nav} href="/apply" class="bg-apex-green transition-colors hover:bg-apex-purple py-2 px-7 rounded-full">Aplică acum!</a>
             </div>
         </div>
     </div>

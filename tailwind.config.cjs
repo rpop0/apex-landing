@@ -9,7 +9,9 @@ const config = {
 			},
 		},
 		fontFamily: {
-			sans: ['Poppins', 'sans-serif']
+			sans: ['Poppins', 'sans-serif'],
+			'soulmaze': ['MADE-Soulmaze'],
+			'soulmaze-outline': ['MADE-Soulmaze-Outline']
 		}
 	},
 
