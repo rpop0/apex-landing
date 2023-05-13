@@ -1,8 +1,6 @@
 <script>
 	import '../app.postcss';
 	import Nav from '$lib/Nav.svelte';
-    import Header from '$lib/index/Header.svelte';
-    import About from '$lib/index/About.svelte';
 </script>
 
 <svelte:head>
@@ -10,9 +8,7 @@
 </svelte:head>
 <div class="home-app">
     <Nav />
-    <Header />
     <slot />
-    <About />
 </div>
 
 
@@ -23,8 +19,11 @@
       background-image: url("src/lib/assets/images/burshed-circle-left.svg");
       position: absolute;
       width: 614px;
+      max-width: 100%;
       height: 956px;
       left: 0;
+      z-index: -1;
+
     }
     &::after {
       content: '';

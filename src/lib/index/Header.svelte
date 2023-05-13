@@ -1,54 +1,29 @@
 <script>
-import Fa from 'svelte-fa/src/fa.svelte';
 import {faPatreon, faDiscord} from '@fortawesome/free-brands-svg-icons';
 import apex_truck from '$lib/assets/images/apex-truck.png';
+import Button from "$lib/Button.svelte";
 </script>
 
 
-<h1 class="">
-
-  <div class="header flex items-center">
-    <div class="container px-5 md:px-0 md:mx-auto">
-      <div class="flex justify-between items-center">
-        <div class="flex flex-col">
-          <h1 class="text-4xl md:text-6xl font-soulmaze-outline millions opacity-40">Millions of Miles</h1>
-          <h1 class="text-2xl md:text-4xl font-soulmaze">Millions of Miles<br>with Smiles<span class="text-primary">.</span></h1>
-          <h1 class="text-4xl md:text-6xl font-soulmaze-outline smiles opacity-40">with Smiles</h1>
-          <p class="text-lg font-semibold mt-2"><span class="text-underline">Changing The Way Virtual Trucking Is Today</span></p>
-          <div class="flex gap-5 mt-8">
-            <a href="#" class="bg-patreon font-semibold p-3 px-7 rounded-full text-center"><Fa icon={faPatreon} class='inline mr-3' />Patreon</a>
-            <a href="#" class="bg-discord font-semibold p-3 px-7 rounded-full text-center"><Fa icon={faDiscord} class='inline mr-3' />Discord</a>
-          </div>
+<div class="container mx-auto grid grid-cols-3 items-center mt-20">
+  <div class="col-span-3 lg:col-span-2 container px-5 md:px-0 md:mx-auto">
+      <div class="flex flex-col">
+        <h1 class="text-4xl md:text-6xl font-soulmaze-outline millions opacity-40">Millions of Miles</h1>
+        <h1 class="text-2xl md:text-4xl font-soulmaze">Millions of Miles<br>with Smiles<span class="text-primary">.</span></h1>
+        <h1 class="text-4xl md:text-6xl font-soulmaze-outline smiles opacity-40">with Smiles</h1>
+        <p class="text-lg font-semibold mt-2"><span class="text-underline">Changing The Way Virtual Trucking Is Today</span></p>
+        <div class="flex flex-row gap-5 mt-8">
+          <Button type="patreon" icon={faPatreon}>Patreon</Button>
+          <Button type="discord" class="bg-red" icon={faDiscord}>Discord</Button>
         </div>
       </div>
-    </div>
-    <img class="hidden 2xl:block"  src="{apex_truck}">
   </div>
-</h1>
-
+  <img class="hidden lg:block w-[35vw] absolute right-0"  src="{apex_truck}">
+</div>
 
 <style>
 .text-primary {
   color: #00F3B3;
-}
-
-.bg-discord {
-  background-color: #5865F2;
-  color: white;
-}
-
-.bg-patreon {
-  background-color: #F96854;
-  color: white;
-}
-
-.bg-github {
-  background-color: #171515;
-}
-
-.header {
-  height: 350px;
-  position: relative;
 }
 
 .millions {
@@ -63,12 +38,4 @@ import apex_truck from '$lib/assets/images/apex-truck.png';
     z-index: -1;
   }
 
-@media only screen and (max-width: 1279px) {
-  .header {
-    height: 250px;
-  }
-    .left {
-      margin-left: 34px;
-    }
-}
 </style>
