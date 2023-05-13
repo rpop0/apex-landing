@@ -1,76 +1,56 @@
 <script>
-import Fa from 'svelte-fa/src/fa.svelte'
-import {faPatreon, faDiscord} from '@fortawesome/free-brands-svg-icons'
+    import application from '$lib/assets/images/application.png';
+    import truck_cabin from '$lib/assets/images/truck-cabin.png';
+    import Fa from 'svelte-fa/src/fa.svelte';
+    import {faGithub} from '@fortawesome/free-brands-svg-icons';
+    import {faDownload} from '@fortawesome/free-solid-svg-icons';
 </script>
 
 
-<h1 class="">
+<div class="container px-5 md:px-0 md:mx-auto relative mt-10">
+    <h1 class="font-soulmaze text-2xl md:text-4xl">About Us</h1>
+    <h1 class="text-4xl md:text-6xl font-soulmaze-outline absolute -top-1.5 md:-top-2.5 md:-left-4 opacity-40">About Us</h1>
+    <p class="mt-5 text-gray-500">Lorem ipsum dolor sit amet, <span class="text-underline font-semibold">Apex Express</span> consectetur adipiscing elit. Mauris lobortis cursus libero a scelerisque. In consequat tristique sapien sed rutrum. Curabitur eu magna ante. Morbi accumsan leo quis lectus vulputate, et dapibus mi rutrum. Integer bibendum gravida purus, in tristique purus dignissim eget. Quisque facilisis tortor velit, at aliquet orci rhoncus nec. Sed at dignissim odio, a sodales nulla. Vivamus eget libero eros. </p>
+</div>
 
-  <div class="header flex items-center">
-    <div class="container px-5 md:px-0 md:mx-auto">
-      <div class="flex justify-between items-center">
-        <div class="flex flex-col">
-          <h1 class="text-4xl md:text-6xl font-soulmaze-outline millions opacity-40">Millions of Miles</h1>
-          <h1 class="text-2xl md:text-4xl font-soulmaze">Millions of Miles<br>with Smiles<span class="text-primary">.</span></h1>
-          <h1 class="text-4xl md:text-6xl font-soulmaze-outline smiles opacity-40">with Smiles</h1>
-          <p class="text-lg font-semibold mt-2"><span class="text-underline">Changing The Way Virtual Trucking Is Today</span></p>
-          <div class="flex gap-5 mt-8">
-            <a href="#" class="bg-patreon font-semibold p-3 px-7 rounded-full text-center"><Fa icon={faPatreon} class='inline mr-3' />Patreon</a>
-            <a href="#" class="bg-discord font-semibold p-3 px-7 rounded-full text-center"><Fa icon={faDiscord} class='inline mr-3' />Discord</a>
-          </div>
+<div class="container px-5 md:px-0 md:mx-auto mt-20">
+  <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
+    <div class="md:mb-0 mb-10">
+      <img class="shadow-xl our-core-img" src="{application}">
+    </div>
+    <div class="relative text-right">
+      <h1 class="font-soulmaze text-2xl md:text-4xl ">Our Core</h1>
+      <h1 class="text-4xl md:text-6xl font-soulmaze-outline absolute -right-5 -top-1.5 md:-top-2.5  opacity-40">Our Core</h1>
+      <p class="mt-4 text-gray-500">Lorem ipsum dolor sit amet, Apex Express consectetur adipiscing elit. Mauris lobortis cursus libero a scelerisque. In consequat tristique sapien sed rutrum. Curabitur eu magna ante. Morbi accumsan leo quis lectus vulputate, et dapibus mi rutrum. Integer bibendum gravida purus, in tristique purus dignissim eget. Quisque facilisis tortor velit.
+        <br><br><br>
+        In consequat tristique sapien sed rutrum. Curabitur eu magna ante. Morbi accumsan leo quis lectus vulputate, et dapibus mi rutrum. Integer bibendum gravida purus, in tristique purus dignissim eget. Quisque facilisis tortor velit. </p>
+      <div class="flex justify-end gap-5">
+        <a href="#" class="bg-apex-green py-3 px-7 rounded-full mt-8 font-semibold md:text-xl text-base"><Fa icon={faDownload} class='inline mr-3' />Descarcă Aplicația</a>
+        <a href="#" class="bg-black text-white py-3 px-7 rounded-full mt-8 font-semibold md:text-xl text-base"><Fa icon={faGithub} class='inline mr-3' />GitHub</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container px-5 md:px-0 md:mx-auto relative mt-20">
+    <div class="grid grid-cols-3 items-center">
+      <div class="col-span-2" data-aos="fade-right">
+        <h1 class="font-soulmaze text-2xl md:text-4xl">About our divisions</h1>
+        <h1 class="text-4xl md:text-6xl font-soulmaze-outline absolute -top-1.5 md:-top-2.5 md:-left-4 opacity-40">About our divisionS</h1>
+        <p class="text-gray-500 mt-5">Lorem ipsum dolor sit amet, Apex Express consectetur adipiscing elit. Mauris lobortis cursus libero a scelerisque. In consequat tristique sapien sed rutrum. Curabitur eu magna ante. Morbi accumsan leo quis lectus vulputate, et dapibus mi rutrum. </p>
+        <div class="flex mt-5">
+          <a href="#" class="bg-apex-green py-3 px-7 font-semibold rounded-full">Vezi mai multe</a>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-end align-top">
+          <img class="hidden md:block" src={truck_cabin} />
         </div>
       </div>
     </div>
-    <img data-aos="fade-down" data-aos-offset="500" data-aos-duration="500" :src="require('~/assets/images/apex-truck.png')">
-  </div>
-</h1>
-
+</div>
 
 <style>
-.text-primary {
-  color: #00F3B3;
-}
 
-.bg-discord {
-  background-color: #5865F2;
-  color: white;
-}
-
-.bg-patreon {
-  background-color: #F96854;
-  color: white;
-}
-
-.bg-github {
-  background-color: #171515;
-}
-
-.header {
-  height: 350px;
-  position: relative;
-}
-
-.millions {
-        margin-bottom: -30px;
-        margin-left: -20px;
-        z-index: -1;
-  }
-
-.smiles {
-    margin-top: -30px;
-    margin-left: -20px;
-    z-index: -1;
-  }
-
-@media only screen and (max-width: 1279px) {
-  .header {
-    height: 250px;
-  }
-    img {
-      display: none;
-    }
-    .left {
-      margin-left: 34px;
-    }
-}
 </style>

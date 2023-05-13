@@ -1,6 +1,8 @@
 <script>
 	import '../app.postcss';
 	import Nav from '$lib/Nav.svelte';
+    import Header from '$lib/index/Header.svelte';
+    import About from '$lib/index/About.svelte';
 </script>
 
 <svelte:head>
@@ -8,7 +10,9 @@
 </svelte:head>
 <div class="home-app">
     <Nav />
+    <Header />
     <slot />
+    <About />
 </div>
 
 
